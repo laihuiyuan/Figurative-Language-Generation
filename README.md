@@ -2,11 +2,11 @@
 
 
 ## Simile
+- [A multiagent text generator with simple rhetorical habilities](https://www.aaai.org/Papers/Workshops/2006/WS-06-04/WS06-04-007.pdf). AAAI Workshop 2006.
 - [FIGURE8: A Novel System for Generating and Evaluating Figurative Language](https://www.semanticscholar.org/paper/FIGURE8%3A-A-Novel-System-for-Generating-and-Language-Harmon/77f14f3b5f094bf2e785fae772846116da18fa48). ICCC 2015.
 - [Generating similes effortlessly like a Pro: A Style Transfer Approach for Simile Generation](https://aclanthology.org/2020.emnlp-main.524/). EMNLP 2020. [[code/data](https://github.com/tuhinjubcse/SimileGeneration-EMNLP2020)]
 - [Writing Polishment with Simile: Task, Dataset and A Neural Approach](https://ojs.aaai.org/index.php/AAAI/article/view/17691). AAAI 2021. [[code/data](https://github.com/mrzjy/writing-polishment-with-simile)]
 - [It’s not Rocket Science: Interpreting Figurative Language in Narratives](https://arxiv.org/pdf/2109.00087.pdf). TACL 2022. [[code/data](https://github.com/tuhinjubcse/FigurativeNarrativeBenchmark)]
-- [A multiagent text generator with simple rhetorical habilities](https://www.aaai.org/Papers/Workshops/2006/WS-06-04/WS06-04-007.pdf). AAAI Workshop 2006.
 
 ## Metaphor
 - [The metaphor machine: A database method for creativity support](https://www.sciencedirect.com/science/article/abs/pii/0167923687901023). Decision Support Systems 1987.
@@ -23,13 +23,13 @@
 - [Metaphor as a Medium for Emotion: An Empirical Study](https://aclanthology.org/S16-2003/). SemEval 2016. [[data](http://saifmohammad.com/WebPages/metaphor.html)]
 - [Metaphoria: An Algorithmic Companion for Metaphor Creation](https://dl.acm.org/doi/10.1145/3290605.3300526). CHI 2019.
 - [Rhetorically Controlled Encoder-Decoder for Modern Chinese Poetry Generation](https://aclanthology.org/P19-1192/). ACL 2019. [[code/data](https://github.com/Lucien-qiang/Rhetoric-Generator)]
-- [How to Avoid Sentences Spelling Boring? Towards a Neural Approach to Unsupervised Metaphor Generation](https://aclanthology.org/N19-1092/)
 - [Metaphoric Paraphrase Generation](https://arxiv.org/pdf/2002.12854.pdf). Arxiv 2020.
 - [How to Avoid Sentences Spelling Boring? Towards a Neural Approach to Unsupervised Metaphor Generation](https://aclanthology.org/N19-1092/). NAACL 2019. [[code/data](https://github.com/ArleneYuZhiwei/Metaphor-Generation)]
 - [Exploring Metaphoric Paraphrase Generation](https://aclanthology.org/2021.conll-1.26/). CoNLL 2021. [[code/data](https://github.com/ukplab/conll2021-metaphoric-paraphrase-generation)]
 - [MERMAID: Metaphor Generation with Symbolism and Discriminative Decoding](https://aclanthology.org/2021.naacl-main.336/). NAACL 2021. [[code/data](https://github.com/tuhinjubcse/MetaphorGenNAACL2021)]
 - [Metaphor Generation with Conceptual Mappings](https://aclanthology.org/2021.acl-long.524/). ACL 2021. [[code/data](https://github.com/UKPLab/acl2021-metaphor-generation-conceptual)]
 - [A Recipe for Arbitrary Text Style Transfer with Large Language Models](https://arxiv.org/abs/2109.03910). ACL 2022. 
+- [Nominal Metaphor Generation with Multitask Learning](https://arxiv.org/abs/2206.05195). INLG 2022.
 
 ## Hyperbole
 - [A Computational Exploration of Exaggeration](https://aclanthology.org/D18-1367/). EMNLP 2018. [[data](enrica.troiano@gmail.com)]
@@ -60,7 +60,7 @@
 - [A neural approach to pun generation](https://aclanthology.org/P18-1153/). ACL 2018. 
 - [Pun-GAN: Generative Adversarial Network for Pun Generation](https://aclanthology.org/D19-1336/). EMNLP 2019. [[code](https://github.com/lishunyao97/Pun-GAN)]
 - [Homophonic pun gen- eration with lexically constrained rewriting](https://aclanthology.org/2020.emnlp-main.229/). EMNLP 2020. [[code/data](https://github.com/ArleneYuZhiwei/LCR)]
-
+- [AmbiPun: Generating Humorous Puns with Ambiguous Context](https://arxiv.org/abs/2205.01825). NAACL 2022.
 ## Analogy
 - [A multiagent text generator with simple rhetorical habilities](https://www.aaai.org/Papers/Workshops/2006/WS-06-04/WS06-04-007.pdf). AAAI Workshop 2006.
 - [Analogy Generation by Prompting Large Language Models: A Case Study of InstructGPT](https://openreview.net/pdf?id=HfepFeWxf9).
