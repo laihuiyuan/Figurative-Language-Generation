@@ -39,7 +39,7 @@
 
 ## Idiom
 - [Phrasal Substitution of Idiomatic Expressions](https://aclanthology.org/N16-1040/). NAACL 2016. [[data](https://github.com/liucs1986/idiom_corpus)]
-- [Examining the Tip of the Iceberg: A Data Set for Idiom Translation](https://aclanthology.org/L18-1148/). LREC 2018. [[code](https://github.com/marziehf/IdiomTranslationDS)]
+- [Examining the Tip of the Iceberg: A Data Set for Idiom Translation](https://aclanthology.org/L18-1148/). LREC 2018. [[code/data](https://github.com/marziehf/IdiomTranslationDS)]
 - [From Solving a Problem Boldly to Cutting the Gordian Knot: Idiomatic](https://arxiv.org/abs/2104.06541). Arxiv 2021. [[data](https://github.com/zhjjn/PIE)]
 - [It’s not Rocket Science: Interpreting Figurative Language in Narratives](https://arxiv.org/pdf/2109.00087.pdf). TACL 2022. [[code/data](https://github.com/tuhinjubcse/FigurativeNarrativeBenchmark)]
 
@@ -59,8 +59,8 @@
 - [Pun Generation with Surprise](https://aclanthology.org/N19-1172/). NAACL 2019. [[code/data](https://github.com/hhexiy/pungen)]
 - [A neural approach to pun generation](https://aclanthology.org/P18-1153/). ACL 2018. 
 - [Pun-GAN: Generative Adversarial Network for Pun Generation](https://aclanthology.org/D19-1336/). EMNLP 2019. [[code](https://github.com/lishunyao97/Pun-GAN)]
-- [Homophonic pun gen- eration with lexically constrained rewriting](https://aclanthology.org/2020.emnlp-main.229/). EMNLP 2020. [[code/data](https://github.com/ArleneYuZhiwei/LCR)]
-- [AmbiPun: Generating Humorous Puns with Ambiguous Context](https://arxiv.org/abs/2205.01825). NAACL 2022.
+- [Homophonic pun generation with lexically constrained rewriting](https://aclanthology.org/2020.emnlp-main.229/). EMNLP 2020. [[code/data](https://github.com/ArleneYuZhiwei/LCR)]
+- [AmbiPun: Generating Humorous Puns with Ambiguous Context](https://aclanthology.org/2022.naacl-main.77/). NAACL 2022.
 ## Analogy
 - [A multiagent text generator with simple rhetorical habilities](https://www.aaai.org/Papers/Workshops/2006/WS-06-04/WS06-04-007.pdf). AAAI Workshop 2006.
 - [Analogy Generation by Prompting Large Language Models: A Case Study of InstructGPT](https://openreview.net/pdf?id=HfepFeWxf9).
