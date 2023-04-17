@@ -263,3 +263,123 @@ We hope this survey can help researchers in NLP and related fields to easily tra
 </table>
 
 
+<h2 id="3">Modelling Approaches</h2>
+
+We review the modelling approaches, from traditional to state-of-the-art, and divide them into two categories: <strong>knowledge-based</strong> and <strong>neural-based approaches</strong>.
+
+
+<table>
+<th colspan="6" align="left"><h3 id="3.1">Knowledge-based Approaches</h3></th>
+
+  <tr>
+    <th align="center">Subcategory </th>
+    <th align="center">Paper</th>
+    <th align="center">Code</th>
+    <th align="center">Form</th>
+    <th align="center">Venue</th>
+    <th align="center">Pros and Cons</th>
+
+  <tr>
+    <td rowspan="4" align="center">Rule and template</td>
+    <td align="center"><a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.488.9588&rep=rep1&type=pdf">Abe et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Metaphor</td>
+    <td align="center">CSS 2006</td>
+    <td rowspan="4" align="left"><b>Pros</b>:<br>- Intuitive and simple<br>- Tailored to specific forms<br><b>Cons</b>:<br>- Poor flexibility and diversity</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://projet.liris.cnrs.fr/imagine/pub/proceedings/ICANN-2010/papers/6353/63530142.pdf">Terai et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Metaphor</td>
+    <td align="center">ICANN 2010</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://sentic.net/wisdom2015joshi.pdf">Joshi et al.</a></td>
+    <td align="center"><a href="https://github.com/adityajo/sarcasmbot">Code</a></td>
+    <td align="center">Sarcasm</td>
+    <td align="center">WISDOM 2015</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/W16-1105/">Veale et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Metaphor</td>
+    <td align="center">Metaphor WS 2016</td>
+  </tr>
+
+  <tr>
+    <td rowspan="12" align="center">Knowledge resource</td>
+    <td align="center"><a href="http://nil.fdi.ucm.es/sites/default/files/CABH06.pdf">Pereira et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Metaphor</td>
+    <td align="center">AAAI WS 2006</td>
+    <td rowspan="12" align="left"><b>Pros</b>:<br>- Exploiting knowledge resource<br>- High interpretability<br><b>Cons</b>:<br>- Prior linguistic knowledge<br>- Construct desired resources</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/C08-1119/">Veale et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Metaphor</td>
+    <td align="center">COLING 2008</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/P13-2041/">Petrović et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Pun</td>
+    <td align="center">ACL 2013</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/W09-2004/">Hong et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Pun</td>
+    <td align="center">CALC 2009</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/N10-1147/">Shutova et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Metaphor</td>
+    <td align="center">NAACL 2010</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/P13-2044/">Valitutti et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Pun</td>
+    <td align="center">ACL 2013</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/N16-1040/">Liu et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Idiom</td>
+    <td align="center">NAACL 2016</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://dl.acm.org/doi/10.1145/3290605.3300526">Gero et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Metaphor</td>
+    <td align="center">CHI 2019</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2021.acl-long.524/">Stowe et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Metaphor</td>
+    <td align="center">ACL 2021</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://nil.fdi.ucm.es/sites/default/files/HervasEtAlMICAI07.pdf">Hervas et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Metaphor</td>
+    <td align="center">MICAI 2007</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://arxiv.org/abs/1409.7619">Ovchinnikova et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Metaphor</td>
+    <td align="center">Arxiv 2014</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://computationalcreativity.net/iccc2015/proceedings/4_1Harmon.pdf">Harmon et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Simile</td>
+    <td align="center">ICCC 2015</td>
+  </tr>
+
+</table>
+
