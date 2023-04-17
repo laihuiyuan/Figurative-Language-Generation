@@ -265,7 +265,7 @@ We hope this survey can help researchers in NLP and related fields to easily tra
 
 <h2 id="3">Modelling Approaches</h2>
 
-We review the modelling approaches, from traditional to state-of-the-art, and divide them into two categories: <strong>knowledge-based</strong> and <strong>neural-based approaches</strong>.
+We review the modelling approaches, from traditional to state-of-the-art, and divide them into two categories: <strong>[knowledge-based](#3.1)</strong> and <strong>[neural-based approaches](#3.2)</strong>.
 
 
 <table>
@@ -381,5 +381,205 @@ We review the modelling approaches, from traditional to state-of-the-art, and di
     <td align="center">ICCC 2015</td>
   </tr>
 
+
+<th colspan="6" align="left"><h3 id="3.2">Neural-based Approaches</h3></th>
+
+  <tr>
+    <th align="center">Subcategory </th>
+    <th align="center">Paper</th>
+    <th align="center">Code</th>
+    <th align="center">Form</th>
+    <th align="center">Venue</th>
+    <th align="center">Pros and Cons</th>
+
+  <tr>
+    <td rowspan="13" align="center">Training from scratch</td>
+    <td align="center"><a href="https://aclanthology.org/P17-1155/">Peled et al.</a></td>
+    <td align="center"><a href="https://github.com/Lotemp/SarcasmSIGN">Code</a></td>
+    <td align="center">Sarcasm</td>
+    <td align="center">ACL 2017</td>
+    <td rowspan="13" align="left"><b>Pros</b>:<br>- Straightforward<br>- Combine retrieval approaches<br><b>Cons</b>:<br>- Large-scale training data<br>- Large computational resources</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/L18-1148/">Fadaee et al.</a></td>
+    <td align="center"><a href="https://github.com/marziehf/IdiomTranslationDS">Code</a></td>
+    <td align="center">Idiom</td>
+    <td align="center">LREC 2018</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/P19-1192/">Liu et al.</a></td>
+    <td align="center"><a href="https://github.com/Lucien-qiang/Rhetoric-Generator">Code</a></td>
+    <td align="center">Metaphor/<br>Personification</td>
+    <td align="center">ACL 2019</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2021.conll-1.26/">Stowe et al.</a></td>
+    <td align="center"><a href="https://github.com/ukplab/conll2021-metaphoric-paraphrase-generation">Code</a></td>
+    <td align="center">Metaphor</td>
+    <td align="center">CoNLL 2021</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/P18-1153/">Yu et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Pun</td>
+    <td align="center">ACL 2018</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/N19-1092/">Yu et al.</a></td>
+    <td align="center"><a href="https://github.com/ArleneYuZhiwei/Metaphor-Generation">Code</a></td>
+    <td align="center">Metaphor</td>
+    <td align="center">NAACL 2019</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2022.inlg-main.18/">Li et al.</a></td>
+    <td align="center"><a href="https://github.com/liyucheng09/Metaphor_Generator">Code</a></td>
+    <td align="center">Metaphor</td>
+    <td align="center">INLG 2022</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/N19-1172/">He et al.</a></td>
+    <td align="center"><a href="https://github.com/hhexiy/pungen">Code</a></td>
+    <td align="center">Pun</td>
+    <td align="center">NAACL 2019</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2020.emnlp-main.229/">Yu et al.</a></td>
+    <td align="center"><a href="https://github.com/ArleneYuZhiwei/LCR">Code</a></td>
+    <td align="center">Pun</td>
+    <td align="center">EMNLP 2020</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://arxiv.org/abs/2104.06541">Zhou et al.</a></td>
+    <td align="center"><a href="https://github.com/zhjjn/PIE">Code</a></td>
+    <td align="center">Idiom</td>
+    <td align="center">Arxiv 2021</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://arxiv.org/abs/1909.06200">Zhu et al.</a></td>
+    <td align="center"><a href="https://github.com/zmd971202/IronyGeneration">Code</a></td>
+    <td align="center">Irony</td>
+    <td align="center">Arxiv 2019</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/D19-1336/">Luo et al.</a></td>
+    <td align="center"><a href="https://github.com/lishunyao97/Pun-GAN">Code</a></td>
+    <td align="center">Pun</td>
+    <td align="center">EMNLP 2019</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/D19-1636/">Mishra et al.</a></td>
+    <td align="center"><a href="https://github.com/TarunTater/sarcasm_generation">Code</a></td>
+    <td align="center">Sarcasm</td>
+    <td align="center">EMNLP 2019</td>
+  </tr>
+
+
+  <tr>
+    <td rowspan="13" align="center">Fine-tuning PLMs</td>
+    <td align="center"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/17691">Zhang et al.</a></td>
+    <td align="center"><a href="https://github.com/mrzjy/writing-polishment-with-simile">Code</a></td>
+    <td align="center">Simile</td>
+    <td align="center">AAAI 2021</td>
+    <td rowspan="13" align="left"><b>Pros</b>:<br>- Straightforward<br>-Pre-trained knowledge<br> - State-of-the-art results<br><b>Cons</b>:<br>- Large computational resources</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/21433">Zhou et al.</a></td>
+    <td align="center"><a href="https://github.com/zhjjn/ISP">Code</a></td>
+    <td align="center">Idiom</td>
+    <td align="center">AAAI 2022</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2022.naacl-main.440/">Zhang et al.</a></td>
+    <td align="center"><a href="https://github.com/yunx-z/mover">Code</a></td>
+    <td align="center">Hyperbole</td>
+    <td align="center">NAACL 2022</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2020.emnlp-main.524/">Chakrabarty et al.</a></td>
+    <td align="center"><a href="https://github.com/tuhinjubcse/SimileGeneration-EMNLP2020">Code</a></td>
+    <td align="center">Simile</td>
+    <td align="center">EMNLP 2020</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2021.acl-long.524/">Stowe et al.</a></td>
+    <td align="center"><a href="https://github.com/UKPLab/acl2021-metaphor-generation-conceptual">Code</a></td>
+    <td align="center">Metaphor</td>
+    <td align="center">ACL 2021</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2021.naacl-main.336/">Chakrabarty, et al.</a></td>
+    <td align="center"><a href="https://github.com/tuhinjubcse/MetaphorGenNAACL2021">Code</a></td>
+    <td align="center">Metaphor</td>
+    <td align="center">NAACL 2021</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2021.conll-1.26/">Stowe et al.</a></td>
+    <td align="center"><a href="https://github.com/ukplab/conll2021-metaphoric-paraphrase-generation">Code</a></td>
+    <td align="center">Metaphor</td>
+    <td align="center">CoNLL 2021</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2021.findings-emnlp.136/">Tian et al.</a></td>
+    <td align="center"><a href="https://github.com/ninatian98369/hypogen">Code</a></td>
+    <td align="center">hyperbole</td>
+    <td align="center">EMNLP 2021</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2020.acl-main.711/">Chakrabarty et al.</a></td>
+    <td align="center"><a href="https://github.com/tuhinjubcse/SarcasmGeneration-ACL2020">Code</a></td>
+    <td align="center">Sacarsm</td>
+    <td align="center">ACL 2020</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2022.naacl-main.77/">Mittal et al.</a></td>
+    <td align="center"><a href="https://github.com/pluslabnlp/ambipun">Code</a></td>
+    <td align="center">Pun</td>
+    <td align="center">NAACL 2022</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2022.tacl-1.34/">Chakrabarty et al.</a></td>
+    <td align="center"><a href="https://github.com/tuhinjubcse/FigurativeNarrativeBenchmark">Code</a></td>
+    <td align="center">Idiom<br>Simile</td>
+    <td align="center">TACL 2022</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2022.findings-emnlp.237/">Tian et al.</a></td>
+    <td align="center"><a href="https://github.com/PlusLabNLP/Unified_PunGen">Code</a></td>
+    <td align="center">Pun</td>
+    <td align="center">EMNLP 2022</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2022.coling-1.519/">Lai et al.</a></td>
+    <td align="center"><a href="https://github.com/laihuiyuan/mflag">Code</a></td>
+    <td align="center">Hyperbole<br>Sarcasm<br>Idiom<br>Metaphor<br>Simile</td>
+    <td align="center">COLING 2022</td>
+  </tr>
+
+  <tr>
+    <td rowspan="9" align="center">Prompt learning</td>
+    <td align="center"><a href="https://aclanthology.org/2022.tacl-1.34/">Chakrabarty et al.</a></td>
+    <td align="center"><a href="https://github.com/tuhinjubcse/FigurativeNarrativeBenchmark">Code</a></td>
+    <td align="center">Idiom<br>Simile</td>
+    <td align="center">TACL 2022</td>
+    <td rowspan="9" align="left"><b>Pros</b>:<br>- Straightforward<br>- A few/no labelled samples<br><b>Cons</b>:<br>- Prompt engineering<br>- Large computational resources</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2022.acl-short.94/">Reif et al.</a></td>
+    <td align="center">-</td>
+    <td align="center">Metaphor</td>
+    <td align="center">ACL 2022</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2022.naacl-main.77/">Mittal et al.</a></td>
+    <td align="center"><a href="https://github.com/pluslabnlp/ambipun">Code</a></td>
+    <td align="center">Pun</td>
+    <td align="center">NAACL 2022</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://aclanthology.org/2022.inlg-main.25/">Bhavya et al.</a></td>
+    <td align="center"><a href="https://github.com/Bhaavya/InstructGPT-Analogies">Code</a></td>
+    <td align="center">Analogy<br>(Simile)</td>
+    <td align="center">INLG 2022</td>
+  </tr>
 </table>
 
