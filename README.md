@@ -583,3 +583,7 @@ We review the modelling approaches, from traditional to state-of-the-art, and di
   </tr>
 </table>
 
+<h2 id="3">Evaluation Methods</h2>
+We review 34 papers and count automatic metrics used for the automatic evaluation and criteria set for the human evaluation in Figurative Language Generation.
+
+![](./img/eval.png)
