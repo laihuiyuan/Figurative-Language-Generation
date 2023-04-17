@@ -1,73 +1,265 @@
-# Figurative Language Generation: A Survey
+# A Survey on Automatic Generation of Figurative Language: From Rule-based Systems to Large Language Models
+
+<h2 id="0">Abstract</h2>
+
+<tr>
+Figurative language generation (FLG) is the task of reformulating a given text to include a desired figure of speech, 
+such as a hyperbole, a simile, and several others, while still being faithful to the original context. This is a fundamental, 
+yet challenging task in Natural Language Processing (NLP) to achieve ever more natural text generation, 
+which has recently received increased attention due to the promising performance brought by pre-trained language models. 
+Our survey provides a systematic overview of the development of FLG, mostly in English, starting with the description of some common figures of speech, 
+their corresponding generation tasks and datasets. We then focus on various modelling approaches and assessment strategies, 
+leading us to discussing some challenges in this field, and suggesting some potential directions for future research. 
+To the best of our knowledge, this is the first survey that summarizes the progress of FLG including the most recent development in NLP. 
+We also organize corresponding resources, e.g., paper lists and datasets, and make them accessible in an open repository. 
+We hope this survey can help researchers in NLP and related fields to easily track the academic frontier, providing them with a landscape and a roadmap of this area.
+</tr>
+
+<h2 id="1">Survey Overview</h2>
+
+![](./img/overview.png)
+
+<h2 id="2">Datasets & Benchmarks</h2>
+
+<table>
+  <tr>
+    <th align="center">Figure of speech</th>
+    <th align="center">Task</th>
+    <th align="center">Dataset</th>
+    <th align="center">train</th>
+    <th align="center">Valid</th>
+    <th align="center">Test</th>
+    <th align="center">Lang</th>
+    <th align="center">Para</th>
+  </tr >
+
+  <tr>
+    <th rowspan="4" align="center" valign="middle">Simile</th>
+    <td align="center">Literal&harr;Simile</td>
+    <td align="center"> <a href="https://github.com/tuhinjubcse/SimileGeneration-EMNLP2020">Data</a> </td>
+    <td align="center">82,687</td>
+    <td align="center">5,145</td>
+    <td align="center">150</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+  <tr>
+    <td align="center">Simile↔Context</td>
+    <td align="center"> <a href="https://github.com/mrzjy/writing-polishment-with-simile">Data</a> </td>
+    <td align="center">5.4M</td>
+    <td align="center">2,500</td>
+    <td align="center">2,500</td>
+    <td align="center">zh</td>
+    <td align="center">&#10003</td>
+  </tr>
+  <tr>
+    <td align="center">Narrative+Simile→Text</td>
+    <td align="center"> <a href="https://github.com/tuhinjubcse/FigurativeNarrativeBenchmark">Data</a> </td>
+    <td align="center">3,100</td>
+    <td align="center">376</td>
+    <td align="center">1,520</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+  <tr>
+    <td align="center">Concept→Analogy + Explanation</td>
+    <td align="center"> <a href="https://github.com/Bhaavya/InstructGPT-Analogies">Data</a> </td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">148</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+
+  <tr>
+    <th rowspan="5" align="center" valign="middle">Metaphor</th>
+    <td rowspan="5" align="center">Literal&harr;Metaphor</td>
+    <td align="center"> <a href="https://github.com/UKPLab/conll2021-metaphoric-paraphrase-generation">Data</a> </td>
+    <td align="center">260k</td>
+    <td align="center">15,833</td>
+    <td align="center">250</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+  <tr>
+    <td align="center"> <a href="https://github.com/tuhinjubcse/MetaphorGenNAACL2021">Data</a> </td>
+    <td align="center">90k</td>
+    <td align="center">3,498</td>
+    <td align="center">150</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+  <tr>
+    <td align="center"> <a href="https://github.com/UKPLab/acl2021-metaphor-generation-conceptual">Data</a> </td>
+    <td align="center">248k</td>
+    <td align="center">-</td>
+    <td align="center">150</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+  <tr>
+    <td align="center"> <a href="http://saifmohammad.com/WebPages/metaphor.html">Data</a> </td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">171</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+  <tr>
+    <td align="center"> <a href="https://github.com/liyucheng09/Metaphor_Generator">CMC</a> </td>
+    <td align="center">3,554/2,703</td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">zh</td>
+    <td align="center">&#10007</td>
+  </tr>
+
+  <tr>
+    <th rowspan="4" align="center" valign="middle">Hyperbole</th>
+    <td rowspan="4" align="center">Literal&harr;Hyperbole</td>
+    <td align="center"> <a href="https://aclanthology.org/D18-1367/">Paper</a> </td>
+    <td align="center">709</td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+  <tr>
+    <td align="center"> <a href="http://lichuanyi.info/paper/chinese_hypo.txt">HYPO-cn</a> </td>
+    <td align="center">2,082/2,680</td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">zh</td>
+    <td align="center">&#10007</td>
+  </tr>
+  <tr>
+    <td align="center"> <a href="https://github.com/NinaTian98369/HypoGen">HYPO-red</a> </td>
+    <td align="center">2,163/1,167</td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">en</td>
+    <td align="center">&#10007</td>
+  </tr>
+  <tr>
+    <td align="center"> <a href="https://github.com/yunx-z/MOVER">HYPO-XL</a> </td>
+    <td align="center">-/17,862</td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">en</td>
+    <td align="center">&#10007</td>
+  </tr>
+
+  <tr>
+    <th rowspan="5" align="center" valign="middle">Idiom</th>
+    <td align="center">Idiom&harr;Literal</td>
+    <td align="center"> <a href="https://aclanthology.org/N16-1040/">Paper</a> </td>
+    <td align="center">88</td>
+    <td align="center">-</td>
+    <td align="center">84</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+  <tr>
+    <td align="center">Idiom (en)↔Literal (de)</td>
+    <td rowspan="2" align="center"> <a href="https://github.com/marziehf/IdiomTranslationDS">Data</a> </td>
+    <td align="center">1,998</td>
+    <td align="center">-</td>
+    <td align="center">1,500</td>
+    <td align="center">en/de</td>
+    <td align="center">&#10003</td>
+  </tr>
+  <tr>
+    <td align="center">Idiom (de)↔Literal (en)</td>
+    <td align="center">1,848</td>
+    <td align="center">-</td>
+    <td align="center">1,500</td>
+    <td align="center">de/en</td>
+    <td align="center">&#10003</td>
+  </tr>
+  <tr>
+    <td align="center">Literal↔Idiom</td>
+    <td align="center"> <a href="https://github.com/zhjjn/PIE">PIE</a> </td>
+    <td align="center">3,784</td>
+    <td align="center">876</td>
+    <td align="center">876</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+  <tr>
+    <td align="center">Narrative+Idiom→Text</td>
+    <td align="center"> <a href="https://github.com/tuhinjubcse/FigurativeNarrativeBenchmark">Data</a> </td>
+    <td align="center">3,204</td>
+    <td align="center">355</td>
+    <td align="center">1,542</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+
+  <tr>
+    <th rowspan="4" align="center" valign="middle">Irony (Sarcasm)</th>
+    <td rowspan="4" align="center">Literal&harr;Irony (Sarcasm)</td>
+    <td align="center"> <a href="https://github.com/Lotemp/SarcasmSIGN">Data</a> </td>
+    <td align="center">2,400</td>
+    <td align="center">300</td>
+    <td align="center">300</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+  <tr>
+    <td align="center"> <a href="https://github.com/TarunTater/sarcasm_generation">Data</a> </td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">203</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+  <tr>
+    <td align="center"> <a href="https://github.com/zmd971202/IronyGeneration">Data</a> </td>
+    <td align="center">112k/262k</td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">en</td>
+    <td align="center">&#10007</td>
+  </tr>
+  <tr>
+    <td align="center"> <a href="https://github.com/debanjanghosh/interpreting_verbal_irony">Data</a> </td>
+    <td align="center">4,762</td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+
+  <tr>
+    <th rowspan="2" align="center" valign="middle">Pun</th>
+    <td align="center">Word senses→Pun</td>
+    <td align="center"> <a href="https://www.informatik.tu-darmstadt.de/ukp/research_ukp/ukp_research_data_and_software/ukp_data_and_software.en.jsp">Data</a> </td>
+    <td align="center">1,274</td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+  <tr>
+    <td align="center">Context→Pun</td>
+    <td align="center"> <a href="https://github.com/amazon-science/context-situated-pun-generation">Data</a> </td>
+    <td align="center">2,753</td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td align="center">en</td>
+    <td align="center">&#10003</td>
+  </tr>
+  
+  <tr>
+    <th rowspan="2" align="center" valign="middle">Personification </th>
+    <td align="center">Topic→Personification</td>
+    <td align="center"> <a href="https://github.com/Lucien-qiang/Rhetoric-Generator">Data</a> </td>
+    <td align="center">67,441</td>
+    <td align="center">3,747</td>
+    <td align="center">3,747</td>
+    <td align="center">zh</td>
+    <td align="center">&#10003</td>
+  </tr>
+</table>
 
 
-## Simile
-- [A multiagent text generator with simple rhetorical habilities](https://www.aaai.org/Papers/Workshops/2006/WS-06-04/WS06-04-007.pdf). AAAI Workshop 2006.
-- [FIGURE8: A Novel System for Generating and Evaluating Figurative Language](https://www.semanticscholar.org/paper/FIGURE8%3A-A-Novel-System-for-Generating-and-Language-Harmon/77f14f3b5f094bf2e785fae772846116da18fa48). ICCC 2015.
-- [Generating similes effortlessly like a Pro: A Style Transfer Approach for Simile Generation](https://aclanthology.org/2020.emnlp-main.524/). EMNLP 2020. [[code/data](https://github.com/tuhinjubcse/SimileGeneration-EMNLP2020)]
-- [Writing Polishment with Simile: Task, Dataset and A Neural Approach](https://ojs.aaai.org/index.php/AAAI/article/view/17691). AAAI 2021. [[code/data](https://github.com/mrzjy/writing-polishment-with-simile)]
-- [It’s not Rocket Science: Interpreting Figurative Language in Narratives](https://arxiv.org/pdf/2109.00087.pdf). TACL 2022. [[code/data](https://github.com/tuhinjubcse/FigurativeNarrativeBenchmark)]
-
-## Metaphor
-- [The metaphor machine: A database method for creativity support](https://www.sciencedirect.com/science/article/abs/pii/0167923687901023). Decision Support Systems 1987.
-- [GENERATING A SPECIFIC CLASS OF METAPHORS](https://aclanthology.org/P92-1051.pdf). ACL 1992.
-- [A computational model of the metaphor generation process](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.488.9588&rep=rep1&type=pdf). CSS 2006.
-- [A multiagent text generator with simple rhetorical habilities](https://www.aaai.org/Papers/Workshops/2006/WS-06-04/WS06-04-007.pdf). AAAI Workshop 2006.
-- [Enrichment of automatically generated texts using metaphor](http://nil.fdi.ucm.es/sites/default/files/HervasEtAlMICAI07.pdf). MICAI 2007.
-- [A Fluid Knowledge Representation for Understanding and Generating Creative Metaphors](https://aclanthology.org/C08-1119/). COLING 2008.
-- [A Neural Network Model of Metaphor Generation with Dynamic Interaction](https://www.researchgate.net/publication/221079673_A_Neural_Network_Model_of_Metaphor_Generation_with_Dynamic_Interaction). ICANN 2009.
-- [A Computational System of Metaphor Generation with Evaluation Mechanism](https://projet.liris.cnrs.fr/imagine/pub/proceedings/ICANN-2010/papers/6353/63530142.pdf). ICANN 2010.
-- [Automatic Metaphor Interpretation as a Paraphrasing Task](https://aclanthology.org/N10-1147/). NAACL 2010.
-- [Generating conceptual metaphors from proposition stores](https://arxiv.org/abs/1409.7619). Arxiv 2014.
-- [Round up the usual suspects: Knowledge-based metaphor generation](https://aclanthology.org/W16-1105/). Metaphor in NLP 2016.
-- [Metaphor as a Medium for Emotion: An Empirical Study](https://aclanthology.org/S16-2003/). SemEval 2016. [[data](http://saifmohammad.com/WebPages/metaphor.html)]
-- [Metaphoria: An Algorithmic Companion for Metaphor Creation](https://dl.acm.org/doi/10.1145/3290605.3300526). CHI 2019.
-- [Rhetorically Controlled Encoder-Decoder for Modern Chinese Poetry Generation](https://aclanthology.org/P19-1192/). ACL 2019. [[code/data](https://github.com/Lucien-qiang/Rhetoric-Generator)]
-- [Metaphoric Paraphrase Generation](https://arxiv.org/pdf/2002.12854.pdf). Arxiv 2020.
-- [How to Avoid Sentences Spelling Boring? Towards a Neural Approach to Unsupervised Metaphor Generation](https://aclanthology.org/N19-1092/). NAACL 2019. [[code/data](https://github.com/ArleneYuZhiwei/Metaphor-Generation)]
-- [Exploring Metaphoric Paraphrase Generation](https://aclanthology.org/2021.conll-1.26/). CoNLL 2021. [[code/data](https://github.com/ukplab/conll2021-metaphoric-paraphrase-generation)]
-- [MERMAID: Metaphor Generation with Symbolism and Discriminative Decoding](https://aclanthology.org/2021.naacl-main.336/). NAACL 2021. [[code/data](https://github.com/tuhinjubcse/MetaphorGenNAACL2021)]
-- [Metaphor Generation with Conceptual Mappings](https://aclanthology.org/2021.acl-long.524/). ACL 2021. [[code/data](https://github.com/UKPLab/acl2021-metaphor-generation-conceptual)]
-- [A Recipe for Arbitrary Text Style Transfer with Large Language Models](https://arxiv.org/abs/2109.03910). ACL 2022. 
-- [Nominal Metaphor Generation with Multitask Learning](https://arxiv.org/abs/2206.05195). INLG 2022.
-
-## Hyperbole
-- [A Computational Exploration of Exaggeration](https://aclanthology.org/D18-1367/). EMNLP 2018. [[data](enrica.troiano@gmail.com)]
-- [Identifying Exaggerated Language](https://aclanthology.org/2020.emnlp-main.571/). EMNLP2020. [data]
-- [HypoGen: Hyperbole Generation with Commonsense and Counterfactual Knowledge](https://aclanthology.org/2021.findings-emnlp.136/). ACL Findings 2021. [[code/data](https://github.com/ninatian98369/hypogen)]
-- [MOVER: Mask, Over-generate and Rank for Hyperbole Generation](https://arxiv.org/abs/2109.07726). Arxiv 2021.
-
-## Idiom
-- [Phrasal Substitution of Idiomatic Expressions](https://aclanthology.org/N16-1040/). NAACL 2016. [[data](https://github.com/liucs1986/idiom_corpus)]
-- [Examining the Tip of the Iceberg: A Data Set for Idiom Translation](https://aclanthology.org/L18-1148/). LREC 2018. [[code/data](https://github.com/marziehf/IdiomTranslationDS)]
-- [From Solving a Problem Boldly to Cutting the Gordian Knot: Idiomatic](https://arxiv.org/abs/2104.06541). Arxiv 2021. [[data](https://github.com/zhjjn/PIE)]
-- [It’s not Rocket Science: Interpreting Figurative Language in Narratives](https://arxiv.org/pdf/2109.00087.pdf). TACL 2022. [[code/data](https://github.com/tuhinjubcse/FigurativeNarrativeBenchmark)]
-
-## Irony
-- [SarcasmBot: An open-source sarcasm-generation module for chatbots](https://sentic.net/wisdom2015joshi.pdf). WISDOM 2015. [[code](https://github.com/adityajo/sarcasmbot)]
-- [Sarcasm SIGN: Interpreting Sarcasm with Sentiment Based Monolingual Machine Translation](https://aclanthology.org/P17-1155/). ACL 2017. [[code/data](https://github.com/Lotemp/SarcasmSIGN)]
-- [A Modular Architecture for Unsupervised Sarcasm Generation](https://aclanthology.org/D19-1636/). EMNLP 2019. [[code/data](https://github.com/TarunTater/sarcasm_generation)]
-- [A Neural Approach to Irony Generation](https://arxiv.org/abs/1909.06200). Arxiv 2019. [[code/data](https://github.com/zmd971202/IronyGeneration)].
-- [Interpreting Verbal Irony: Linguistic Strategies and the Connection to the Type of Semantic Incongruity](https://aclanthology.org/2020.scil-1.10/). SCIL 2020. [[data](https://github.com/debanjanghosh/interpreting_verbal_irony)]
-- [Rˆ3: Reverse, Retrieve, and Rank for Sarcasm Generation with Commonsense Knowledge](https://aclanthology.org/2020.acl-main.711/). ACL 2020. [[code](https://github.com/tuhinjubcse/SarcasmGeneration-ACL2020)]
-
-## Pun
-- [Automatically Extracting Word Relationships as Templates for Pun Generation](https://aclanthology.org/W09-2004/). CALC 2009.
-- [Unsupervised joke generation from big data](https://aclanthology.org/P13-2041/). ACL 2013.
-- [“Let Everything Turn Well in Your Wife”: Generation of Adult Humor Using Lexical Constraints](https://aclanthology.org/P13-2044/). ACL 2013.
-- [SemEval-2017 Task 7: Detection and Interpretation of English Puns](https://aclanthology.org/S17-2005/). SemEval 2017. [[data](https://www.ukp.tu-darmstadt.de/data/senselabelling-resources/sense-annotated-englishpuns/)]
-- [Pun Generation with Surprise](https://aclanthology.org/N19-1172/). NAACL 2019. [[code/data](https://github.com/hhexiy/pungen)]
-- [A neural approach to pun generation](https://aclanthology.org/P18-1153/). ACL 2018. 
-- [Pun-GAN: Generative Adversarial Network for Pun Generation](https://aclanthology.org/D19-1336/). EMNLP 2019. [[code](https://github.com/lishunyao97/Pun-GAN)]
-- [Homophonic pun generation with lexically constrained rewriting](https://aclanthology.org/2020.emnlp-main.229/). EMNLP 2020. [[code/data](https://github.com/ArleneYuZhiwei/LCR)]
-- [AmbiPun: Generating Humorous Puns with Ambiguous Context](https://aclanthology.org/2022.naacl-main.77/). NAACL 2022.
-## Analogy
-- [A multiagent text generator with simple rhetorical habilities](https://www.aaai.org/Papers/Workshops/2006/WS-06-04/WS06-04-007.pdf). AAAI Workshop 2006.
-- [Analogy Generation by Prompting Large Language Models: A Case Study of InstructGPT](https://openreview.net/pdf?id=HfepFeWxf9).
-- [Abstraction and Analogy-Making in Artificial Intelligence](https://arxiv.org/pdf/2102.10717.pdf). Arxiv. 2021.
-
-## Personification
-- [Rhetorically Controlled Encoder-Decoder for Modern Chinese Poetry Generation](https://aclanthology.org/P19-1192/). ACL 2019. [[code/data](https://github.com/Lucien-qiang/Rhetoric-Generator)]
-
-## Automatic Evaluation
-- [Evaluation Metrics for Automatically Generated Metaphorical Expressions](https://aclanthology.org/W17-6929/).  IWCS 2017.
