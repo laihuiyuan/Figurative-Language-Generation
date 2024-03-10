@@ -1,17 +1,13 @@
-# A Survey on Automatic Generation of Figurative Language: From Rule-based Systems to Large Language Models
+# A Survey on Automatic Generation of Figurative Language: From Rule-based Systems to Large Language Models (ACM Computing Surveys)
 
 <h2 id="0">Abstract</h2>
 
 <tr>
-Figurative language generation (FLG) is the task of reformulating a given text to include a desired figure of speech, 
-such as a hyperbole, a simile, and several others, while still being faithful to the original context. This is a fundamental, 
-yet challenging task in Natural Language Processing (NLP) to achieve ever more natural text generation, 
-which has recently received increased attention due to the promising performance brought by pre-trained language models. 
-Our survey provides a systematic overview of the development of FLG, mostly in English, starting with the description of some common figures of speech, 
-their corresponding generation tasks and datasets. We then focus on various modelling approaches and assessment strategies, 
-leading us to discussing some challenges in this field, and suggesting some potential directions for future research. 
-To the best of our knowledge, this is the first survey that summarizes the progress of FLG including the most recent development in NLP. 
-We also organize corresponding resources, e.g., paper lists and datasets, and make them accessible in an open repository. 
+Figurative language generation (FLG) is the task of reformulating a given text to include a desired figure of speech, such as a hyperbole, a simile, and several others, while still being faithful to the original context. 
+This is a fundamental, yet challenging task in Natural Language Processing (NLP), which has recently received increased attention due to the promising performance brought by pre-trained language models. 
+Our survey provides a systematic overview of the development of FLG, mostly in English, starting with the description of some common figures of speech, their corresponding generation tasks and datasets. 
+We then focus on various modelling approaches and assessment strategies, leading us to discussing some challenges in this field, and suggesting some potential directions for future research. 
+To the best of our knowledge, this is the first survey that summarizes the progress of FLG including the most recent development in NLP. We also organize corresponding resources, e.g., paper lists and datasets, and make them accessible in an open repository. 
 We hope this survey can help researchers in NLP and related fields to easily track the academic frontier, providing them with a landscape and a roadmap of this area.
 </tr>
 
@@ -527,7 +523,7 @@ We review the modelling approaches, from traditional to state-of-the-art, and di
   <tr>
     <td align="center"><a href="https://aclanthology.org/2020.acl-main.711/">Chakrabarty et al.</a></td>
     <td align="center"><a href="https://github.com/tuhinjubcse/SarcasmGeneration-ACL2020">Code</a></td>
-    <td align="center">Sacarsm</td>
+    <td align="center">Sarcasm</td>
     <td align="center">ACL 2020</td>
   </tr>
   <tr>
@@ -587,3 +583,21 @@ We review the modelling approaches, from traditional to state-of-the-art, and di
 We review 34 papers and count automatic metrics used for the automatic evaluation and criteria set for the human evaluation in Figurative Language Generation.
 
 ![](./img/eval.png)
+
+<h2 id="4">Workshops</h2>
+- [4th Workshop on Processing Figurative Language Processing](https://sites.google.com/view/figlang2024). 2024.
+- [3rd Workshop on Processing Figurative Language Processing](https://aclanthology.org/events/flp-2022/). 2022.
+- [2nd Workshop on Processing Figurative Language Processing](https://aclanthology.org/volumes/2020.figlang-1/). 2020.
+- [1st Workshop on Processing Figurative Language Processing](https://aclanthology.org/volumes/W18-09/). 2020.
+
+## Citation
+```
+@article{lai-etal-2024-agfl,
+    title = "A Survey on Automatic Generation of Figurative Language: From Rule-based Systems to Large Language Models",
+    author = "Lai, Huiyuan and Nissim, Malvina",
+    journal = {ACM Computing Surveys},
+    year = {2024},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+}
+```
